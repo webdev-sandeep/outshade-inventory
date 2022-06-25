@@ -22,7 +22,9 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    "mongodb+srv://sandeep:iY6nfPTmrAz2wkok@cluster0.3knkafa.mongodb.net/inventory?retryWrites=true&w=majority"
+  )
   .then(() => {
     app.listen(process.env.PORT || 5000, "0.0.0.0", () =>
       console.log(
